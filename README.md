@@ -23,7 +23,7 @@ Running the algorithm for 4 iterations:
 python hgtboot.py -g data/gtree_A -s data/stree -b data/bootstrap_trees_A -i 4
 
 <br/>
-Setting costs for evolutionary events (duplications and losses):
+Setting costs for evolutionary events (duplication cost = 3, loss cost = 0):
 
 python hgtboot.py -g data/gtree_A -s data/stree -b data/bootstrap_trees_A -d 3 -l 0
 
