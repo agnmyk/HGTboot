@@ -7,6 +7,7 @@ Python 2.7
 python hgtboot.py -s <file with a species tree> -g <file with a gene tree> -g <file with bootstrap trees> [-d .., -l .., -t.., -i .., -h]
   
 ###### Examples:
+<br/>
 For options description:
 
 python hgtboot.py -h 
