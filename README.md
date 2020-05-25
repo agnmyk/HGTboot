@@ -4,7 +4,7 @@ Program HGTboot implements an iterative DP algorithm for finding acyclic evoluti
 Python 2.7
 
 ## Usage:
-python hgtboot.py -s <file with a species tree> -g <file with a gene tree> -g <file with bootstrap trees> [-d <int>, -l <int>, -t <int>, -i <int>, -h]
+python hgtboot.py -s \<file with a species tree> -g <file with a gene tree> -g <file with bootstrap trees> [-d <int>, -l <int>, -t <int>, -i <int>, -h]
   
 ###### Examples:
 <br/>
