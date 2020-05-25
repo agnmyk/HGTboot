@@ -1,6 +1,5 @@
 # HGTboot
-Program HGTboot allows finding acyclic species graphs with well-supported horizontal gene transfers. 
-
+Program HGTboot implements an iterative DP algorithm for finding acyclic evolutionary scenarios with well-supported and acyclic horizontal gene transfers.
 ## Requirements:
 Python 2.7
 
