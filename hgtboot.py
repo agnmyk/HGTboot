@@ -12,7 +12,7 @@ import math
 
 def print_help():
 	print "\nUsage:"
-	print "hgtboot.py -s <file with a species tree> -g <file with a gene tree> -b <file with bootstrap trees> [-d .., -l .., -t.., -i .., -h]"
+	print "hgtboot.py -s <file with a species tree> -g <file with a gene tree> -b <file with bootstrap trees> [-d <int>, -l <int>, -t <int>, -i .., -h]"
 	print "\nOptions:"
 	print "\t-s <file with a species tree>"
 	print "\t-g <file with a gene tree>"
