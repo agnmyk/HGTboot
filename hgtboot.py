@@ -12,14 +12,15 @@ import math
 
 def print_help():
 	print "\nUsage:"
-	print "hgtboot.py -s <file with a species tree> -g <file with a gene tree> -g <file with bootstrap trees> [-d .., -l .., -t..]"
+	print "hgtboot.py -s <file with a species tree> -g <file with a gene tree> -b <file with bootstrap trees> [-d .., -l .., -t.., -i .., -h]"
 	print "\nOptions:"
 	print "\t-s <file with a species tree>"
 	print "\t-g <file with a gene tree>"
-	print "\t-g <file with bootstrap trees> -- one tree in each line."
+	print "\t-b <file with bootstrap trees> -- one tree in each line."
 	print "\t-d <cost of duplication event>  -- default value = 2"
 	print "\t-l <cost of loss event> -- default value = 1"
 	print "\t-t <cost of horizontal gene transfer event> -- default value = 3"
+	print "\t-i <number of iterations of the algorithm> -- default value = 2"
 	print "\t-h -- print help"
 	sys.exit()
 
@@ -64,10 +65,14 @@ def read_data():
 		print "Bootstrap trees file not provided\n\n"
 		print_help()
 
-	streeFin = open(stree)
-	S = Node.readTree(streeFin.readline().rstrip())
-	gtreeFin = open(gtree)
-	G = Node.readTree(gtreeFin.readline().rstrip())
+	try:
+		streeFin = open(stree)
+		S = Node.readTree(streeFin.readline().rstrip())
+		gtreeFin = open(gtree)
+		G = Node.readTree(gtreeFin.readline().rstrip())
+	except:
+		print "Could not load the gene tree or the species tree"
+		sys.exit(2) 
 	G.lca(S)
 
 	boottrees = []
